@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.svg" alt="AI Infrastructure Consultant Course" width="900"/>
+</p>
+
 # AI Infrastructure Consultant Course
 
 A self-paced curriculum to develop the skills required for Solutions Architect and Customer Engineer roles at AI cloud companies — and to operate as an independent consultant in the same ecosystem.
