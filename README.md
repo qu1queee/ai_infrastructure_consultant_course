@@ -6,9 +6,9 @@
 
 A self-paced curriculum to develop the skills required for Solutions Architect and Customer Engineer roles at AI cloud companies — and to operate as an independent consultant in the same ecosystem.
 
-**Target roles:** AI/ML Specialist Solutions Architect · Customer Engineer · Key Customers Solutions Architect · Principal Solutions Architect
+**Target roles:** AI/ML Specialist Solutions Architect · Solutions Architect (DevOps) · Customer Engineer · Key Customers Solutions Architect · Principal Solutions Architect
 
-**Duration:** ~20 weeks
+**Duration:** ~23 weeks
 
 ---
 
@@ -17,37 +17,39 @@ A self-paced curriculum to develop the skills required for Solutions Architect a
 ### [Phase 1 — Foundations](./phase1-foundations/)
 *Weeks 1–3 · Baseline skills every role assumes*
 
-- [1.1 Python for ML Infra](./phase1-foundations/1.1-python-for-ml-infra/)
+- [1.1 Python & Bash for ML Infra](./phase1-foundations/1.1-python-for-ml-infra/) — Python scripting + Bash automation for infra tasks
 - [1.2 Cloud Fundamentals](./phase1-foundations/1.2-cloud-fundamentals/)
-- [1.3 Linux & Containers](./phase1-foundations/1.3-linux-and-containers/)
+- [1.3 Linux & Containers](./phase1-foundations/1.3-linux-and-containers/) — RHEL/Ubuntu, OS-level security, kernel tuning
 - [1.4 ML Concepts for Non-Researchers](./phase1-foundations/1.4-ml-concepts/)
 
 ---
 
 ### [Phase 2 — GPU & ML Infrastructure](./phase2-gpu-ml-infra/)
-*Weeks 4–7 · The technical core that differentiates this niche*
+*Weeks 4–8 · The technical core that differentiates this niche*
 
-- [2.1 GPU Computing](./phase2-gpu-ml-infra/2.1-gpu-computing/)
+- [2.1 GPU Computing](./phase2-gpu-ml-infra/2.1-gpu-computing/) — CUDA, driver management, GPU profiling, NVIDIA tooling
 - [2.2 ML Training at Scale](./phase2-gpu-ml-infra/2.2-ml-training-at-scale/)
-- [2.3 Multi-node / Multi-GPU Setups](./phase2-gpu-ml-infra/2.3-multi-node-multi-gpu/)
+- [2.3 Multi-node / Multi-GPU & HPC Networking](./phase2-gpu-ml-infra/2.3-multi-node-multi-gpu/) — RDMA, InfiniBand, RoCE, topology-aware scheduling
 - [2.4 Inference Infrastructure](./phase2-gpu-ml-infra/2.4-inference-infrastructure/)
 - [2.5 Deep Learning Frameworks](./phase2-gpu-ml-infra/2.5-deep-learning-frameworks/)
+- [2.6 HPC Cluster Management](./phase2-gpu-ml-infra/2.6-hpc-cluster-management/) — SLURM, MPI, enroot, NVIDIA Base Command Manager (BCM)
 
 ---
 
 ### [Phase 3 — MLOps & Cloud Infrastructure](./phase3-mlops-cloud-infra/)
-*Weeks 8–11 · The operational layer customers always struggle with*
+*Weeks 9–13 · The operational layer customers always struggle with*
 
-- [3.1 Kubernetes for ML](./phase3-mlops-cloud-infra/3.1-kubernetes-for-ml/)
+- [3.1 Kubernetes for ML](./phase3-mlops-cloud-infra/3.1-kubernetes-for-ml/) — GPU Operator, Network Operator, Kubernetes scheduling for AI workloads
 - [3.2 ML Orchestration](./phase3-mlops-cloud-infra/3.2-ml-orchestration/)
-- [3.3 Infrastructure as Code](./phase3-mlops-cloud-infra/3.3-infrastructure-as-code/)
+- [3.3 Infrastructure as Code](./phase3-mlops-cloud-infra/3.3-infrastructure-as-code/) — Terraform, Ansible, configuration management at scale
 - [3.4 MLOps Pipelines](./phase3-mlops-cloud-infra/3.4-mlops-pipelines/)
-- [3.5 Observability](./phase3-mlops-cloud-infra/3.5-observability/)
+- [3.5 Observability](./phase3-mlops-cloud-infra/3.5-observability/) — Prometheus, Grafana, Loki, GPU metrics, cluster health dashboards
+- [3.6 CI/CD & DevOps for AI Infrastructure](./phase3-mlops-cloud-infra/3.6-cicd-devops/) — GitOps, pipeline design, software change management across infrastructure layers
 
 ---
 
 ### [Phase 4 — Solutions Architecture](./phase4-solutions-architecture/)
-*Weeks 12–14 · Turning technical knowledge into deliverables*
+*Weeks 14–16 · Turning technical knowledge into deliverables*
 
 - [4.1 Architecture Patterns](./phase4-solutions-architecture/4.1-architecture-patterns/)
 - [4.2 PoC Design & Delivery](./phase4-solutions-architecture/4.2-poc-design-and-delivery/)
@@ -57,7 +59,7 @@ A self-paced curriculum to develop the skills required for Solutions Architect a
 ---
 
 ### [Phase 5 — Client-Facing Skills](./phase5-client-facing-skills/)
-*Weeks 15–17 · What separates a good engineer from a good consultant*
+*Weeks 17–19 · What separates a good engineer from a good consultant*
 
 - [5.1 Discovery & Qualification](./phase5-client-facing-skills/5.1-discovery-and-qualification/)
 - [5.2 Executive Communication](./phase5-client-facing-skills/5.2-executive-communication/)
@@ -67,7 +69,7 @@ A self-paced curriculum to develop the skills required for Solutions Architect a
 ---
 
 ### [Phase 6 — Capstone](./phase6-capstone/)
-*Weeks 18–20 · Simulate a real consultant engagement end-to-end*
+*Weeks 20–23 · Simulate a real consultant engagement end-to-end*
 
 - [6.1 Architecture Proposal](./phase6-capstone/6.1-architecture-proposal/)
 - [6.2 PoC Execution](./phase6-capstone/6.2-poc-execution/)
