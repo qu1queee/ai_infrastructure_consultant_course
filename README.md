@@ -6,9 +6,9 @@
 
 A self-paced curriculum to develop the skills required for Solutions Architect and Customer Engineer roles at AI cloud companies — and to operate as an independent consultant in the same ecosystem.
 
-**Target roles:** AI/ML Specialist Solutions Architect · Solutions Architect (DevOps) · Customer Engineer · Key Customers Solutions Architect · Principal Solutions Architect
+**Target roles:** Developer Advocate · AI/ML Specialist Solutions Architect · Solutions Architect (DevOps) · Customer Engineer · Key Customers Solutions Architect · Principal Solutions Architect
 
-**Duration:** ~26 weeks full curriculum · ~14–16 weeks on the accelerated SA path
+**Duration:** ~26 weeks full curriculum · ~14–16 weeks on the accelerated SA path · ~10–12 weeks on the accelerated Developer Advocate path
 
 ---
 
@@ -21,7 +21,7 @@ A self-paced curriculum to develop the skills required for Solutions Architect a
 - [1.2 Cloud Fundamentals](./phase1-foundations/1.2-cloud-fundamentals/)
 - [1.3 Linux & Containers](./phase1-foundations/1.3-linux-and-containers/) — RHEL/Ubuntu, OS-level security, kernel tuning
 - [1.4 ML Concepts for Non-Researchers](./phase1-foundations/1.4-ml-concepts/)
-- [1.5 GenAI Application Layer](./phase1-foundations/1.5-genai-application-layer/) — RAG architectures, fine-tuning vs. prompting decisions, agent/MCP patterns, NVIDIA NIM/NeMo, Nebius AI Studio. SA roles at AI clouds increasingly require talking about the workload, not just the infrastructure underneath it.
+- [1.5 GenAI Application Layer](./phase1-foundations/1.5-genai-application-layer/) — RAG architectures, fine-tuning vs. prompting decisions, agent/MCP patterns, NVIDIA NIM/NeMo, Nebius AI Studio. SA and Developer Advocate roles at AI clouds both require engaging with the workload, not just the infrastructure underneath it. For the DA track: internalize this as the mental model your users bring to Token Factory — they are building RAG pipelines, agents, and chatbots, and they evaluate inference platforms through that lens.
 
 ---
 
@@ -31,7 +31,7 @@ A self-paced curriculum to develop the skills required for Solutions Architect a
 - [2.1 GPU Computing](./phase2-gpu-ml-infra/2.1-gpu-computing/) — CUDA, driver management, GPU profiling, NVIDIA tooling
 - [2.2 ML Training at Scale](./phase2-gpu-ml-infra/2.2-ml-training-at-scale/)
 - [2.3 Multi-node / Multi-GPU & HPC Networking](./phase2-gpu-ml-infra/2.3-multi-node-multi-gpu/) — RDMA, InfiniBand, RoCE, topology-aware scheduling
-- [2.4 Inference Infrastructure](./phase2-gpu-ml-infra/2.4-inference-infrastructure/) — **Mini-phase scope (2 weeks).** This is where the overwhelming majority of customer demand sits in 2025–2026. vLLM, TensorRT-LLM, SGLang; KV cache management and memory layout; continuous batching; disaggregated prefill/decode; speculative decoding; $/token economics and serving cost modeling. Treat this as the single most important module in Phase 2.
+- [2.4 Inference Infrastructure](./phase2-gpu-ml-infra/2.4-inference-infrastructure/) — **Mini-phase scope (2 weeks). The single most important module for both SA and Developer Advocate tracks.** vLLM, TensorRT-LLM, SGLang; KV cache management and memory layout; continuous batching; disaggregated prefill/decode; speculative decoding; $/token economics and serving cost modeling. **For the DA track, add:** Nebius Token Factory architecture and API (OpenAI-compatible endpoints, model catalog, batching behavior); TTFT/throughput benchmarking methodology; building benchmark scripts developers can run themselves; framing performance tradeoffs as demo-able scenarios rather than infrastructure docs. Token Factory is the product you will advocate for — know it as a hands-on user before anything else.
 - [2.5 Deep Learning Frameworks](./phase2-gpu-ml-infra/2.5-deep-learning-frameworks/)
 - [2.6 HPC Cluster Management](./phase2-gpu-ml-infra/2.6-hpc-cluster-management/) — SLURM, MPI, enroot, NVIDIA Base Command Manager (BCM)
 - [2.7 Storage for ML](./phase2-gpu-ml-infra/2.7-storage-for-ml/) — Parallel filesystems (Lustre, WEKA, VAST), object storage patterns for training datasets and checkpoints, checkpointing at scale, Nebius managed storage tiers. Comes up in nearly every training-infrastructure engagement and is interview-relevant at Nebius specifically.
@@ -68,6 +68,7 @@ A self-paced curriculum to develop the skills required for Solutions Architect a
 - [5.2 Executive Communication](./phase5-client-facing-skills/5.2-executive-communication/)
 - [5.3 Presales Mechanics](./phase5-client-facing-skills/5.3-presales-mechanics/)
 - [5.4 Trusted Advisor Posture](./phase5-client-facing-skills/5.4-trusted-advisor-posture/)
+- [5.5 Developer Advocacy Craft](./phase5-client-facing-skills/5.5-developer-advocacy/) — **DA track essential.** Demo building principles; technical content creation (tutorials, guides, live-coding); workshop design and delivery; conference talk and demo structure; developer feedback collection and how to route it to product/engineering; community engagement; translating platform performance data into stories developers share. This module has no SA equivalent — it is the core craft of the role.
 
 ---
 
@@ -121,6 +122,31 @@ The 26-week sequential plan is optimized for completeness. If the goal is an SA/
 
 ---
 
+### Accelerated Developer Advocate path (~10–12 weeks)
+
+**Target:** Nebius Developer Advocate – Token Factory. The goal of this path is to emerge as a credible, hands-on user of Token Factory who can build compelling demos, run workshops, write practical guides, and clearly explain performance/cost tradeoffs to developers building real AI products.
+
+**Sprint 1 (weeks 1–2) — Become a Token Factory user first**
+Use Nebius Token Factory directly. Build 3–5 small applications on top of it: a chatbot, a streaming completions demo, a multi-model benchmark harness. Understand the OpenAI-compatible API, rate limits, model catalog, and latency characteristics before reading anything else. Pair with 1.5 (GenAI Application Layer) to understand the workloads your users bring.
+
+**Sprint 2 (weeks 3–4) — Inference depth**
+Work through 2.4 Inference Infrastructure in full. Know vLLM, SGLang, and TensorRT-LLM well enough to explain where Token Factory sits relative to self-hosted alternatives. Build a benchmark script that measures TTFT, tokens/second, and cost-per-million-tokens across models and batch sizes — this becomes a reusable demo asset.
+
+**Sprint 3 (weeks 5–6) — GPU fundamentals + cost messaging**
+2.1 GPU Computing (CUDA basics, memory hierarchy, why bandwidth is the inference bottleneck) and 4.5 GPU Economics ($/token math, KV cache sizing, reserved vs. on-demand). The goal is to be able to answer "why is Token Factory faster/cheaper than X" with specifics, not marketing language.
+
+**Sprint 4 (weeks 7–9) — Developer Advocacy craft**
+5.5 Developer Advocacy Craft in full. Build a demo repository, write two technical guides (one performance-focused, one integration-focused), and deliver one internal mock workshop. Record it. Watch the recording. Iterate.
+
+**Sprint 5 (weeks 10–11) — Communication layer**
+5.2 Executive Communication (adapting technical depth to audience) and 5.1 Discovery & Qualification (understanding what developers actually need, not what they say they need). For DA, this is about developer feedback loops, not deals.
+
+**Skip or defer:** 2.3 (InfiniBand), 2.6 (SLURM/HPC), 3.3 (IaC), 3.6 (CI/CD DevOps), 5.3 (Presales Mechanics — SA-specific). 2.2, 2.5 can be referenced but are not critical path.
+
+**Capstone for DA track (weeks 12+):** Produce a Token Factory demo repository with working examples, a benchmark guide, and a 30-minute workshop deck you could run at an external developer event. These are the portfolio artifacts that replace a company brand when applying for DA roles.
+
+---
+
 ### Do the exercises on Nebius
 
 Spin up GPU instances on Nebius Cloud, use soperator for SLURM exercises, and document what you find. This solves GPU access, produces blog material for eeenotes.dev, and means you walk into any Nebius conversation as an actual user of their platform.
@@ -129,11 +155,13 @@ Spin up GPU instances on Nebius Cloud, use soperator for SLURM exercises, and do
 
 ## Certifications
 
-NVIDIA certifications are lightweight credibility signals that recruiters use as filters. The knowledge overlaps this course substantially — treat them as checkpoints, not as the goal.
+Certifications are lightweight credibility signals. The knowledge overlaps this course substantially — treat them as checkpoints, not as the goal.
 
-| Cert | Code | Scope |
-|---|---|---|
-| NVIDIA-Certified Associate: Generative AI LLMs | NCA-GENL | GenAI application layer, LLM fundamentals, NIM |
-| NVIDIA-Certified Professional: AI Operations | NCP-AIO | GPU infrastructure operations, cluster management, monitoring |
+| Cert | Code | Scope | Track |
+|---|---|---|---|
+| NVIDIA-Certified Associate: Generative AI LLMs | NCA-GENL | GenAI application layer, LLM fundamentals, NIM | Both (SA + DA) |
+| NVIDIA-Certified Professional: AI Operations | NCP-AIO | GPU infrastructure operations, cluster management, monitoring | SA track |
 
-Complete NCA-GENL after Sprint 5. Complete NCP-AIO after Sprint 3.
+**SA track:** Complete NCA-GENL after Sprint 5. Complete NCP-AIO after Sprint 3.
+
+**DA track:** Complete NCA-GENL after DA Sprint 2. It directly covers the inference and LLM concepts you'll explain to developers daily, and the credential is visible to the developer community. NCP-AIO is optional — skip it unless you have spare time after completing 2.6.
